@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+<form onsubmit="sendEmail()">
+<center>
+<h3 style="color: white;background-color:black;width:25%;">GET IN TOUCH</h3>
+</center>
+<h3 style="color: white;background-color:black;width:15%;">NAME:</h3>
+<input type="text" id="name" placeholder="Enter Your Name" required>
+<h3 style="color: white;background-color:black;width:15%;">PLACE:</h3>
+<input type="text" id="phone" placeholder="Enter Your Place" required>
+<!--<input type="file" id="input" onchange="chooseFile(event)"> -->
+<textarea id="message" rows="4" placeholder="ENTER YOUR DOUBTS"></textarea>
+<button type="submit">Get Help</button>
+</form>
+</div>
+
+<script>
+   /* let newimg='t';
+function chooseFile(event){
+    var ufile=URL.createObjectURL(event.target.files[0]);
+     newimg=document.createElement('img');
+     newimg.src=ufile;
+     console.log(newimg);
+}
+*/
+function sendEmail(){
+var name = document.getElementById("name").value;
+var phone = document.getElementById("phone").value;
+var message = document.getElementById("message").value;
+
+ 
+
+
+
+            var url = "https://wa.me/919159220534?text="
+                + "Name: " + name + "%0a"
+                + "Phone: " + phone + "%0a"
+                + "Message: " + message + "%0a"
+                ;
+
+            window.open(url, '_blank').focus();
+}
+
+</script>
+</body>
+</html>

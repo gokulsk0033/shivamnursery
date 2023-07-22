@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ENQUIRY</title>
+    <script src="jquery.min.js"></script>
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link href="css/style.css" rel="stylesheet" >
+  <script src="pdf.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+</head>
+<style>
+.tablelist{
+background-image: url(stem6.jpg);
+
+
+}
+
+
+.cart{
+margin:30px auto;
+}
+table{
+width:100%;
+border-collapse:collapse;
+}
+th{
+
+background:#daf7a6;
+
+}
+
+
+a h2{
+font-weight:bold;
+background:blue;
+padding:15px;
+width:20%;
+}
+body{
+margin-left: 80px;
+}
+
+td input{
+width:18%;
+}
+
+</style>
+
+
+<body>
+<div class="tablelist">
+<h1 style="color:green;font-size:35px;font-weight:bold">SHIVAM NURSERY GARDEN</h1>
+<div id="invoice">
+<div class="cart">
+  <table>
+    <tr>
+    <th>Product name</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>TotalCost
+        <p>Press Enter to claculate Total</p>
+    </th>
+    </tr>
+    
+    <tr>
+    <th>Mango plants</th>
+    </tr>
+    <tr>
+    <td >Mango country Sapling</td>
+    <td> 100 </td>
+    <td ><input type="number" placeholder="ENTER quantity" class="mangov" onkeydown="
+        totalcal(value,100,document.querySelector('.total1'))
+        " ></td>
+    <td> <p class="total1"> </p> </td>
+    </tr>
+<th>Coconut Saplings</th></tr>
+<tr>
+<td >Coconut country sapling</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<th>ROSES</th>
+<tr>
+<td >Red Rose</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<tr>
+<td >Orange Rose</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<tr>
+<td >White Rose</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+
+<tr>
+<th>Mango plants</th>
+</tr>
+<tr>
+<td >Mango country Sapling</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<tr>
+<tr>
+<td >Mango sapling(HYBRID)</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<th>Coconut Saplings</th></tr>
+<tr>
+<td >Coconut country sapling</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<th>ROSES</th>
+<tr>
+<td >Red Rose</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<tr>
+<td >Orange Rose</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<tr>
+<td >White Rose</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<tr>
+<th>Mango plants</th>
+</tr>
+<tr>
+<td >Mango country Sapling</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<tr>
+<tr>
+<td >Mango sapling(HYBRID)</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<th>Coconut Saplings</th></tr>
+<tr>
+<td >Coconut country sapling</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<th>ROSES</th>
+<tr>
+<td >Red Rose</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<tr>
+<td >Orange Rose</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<tr>
+<td >White Rose</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<tr>
+<th>Mango plants</th>
+</tr>
+<tr>
+<td >Mango country Sapling</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<tr>
+<tr>
+<td >Mango sapling(HYBRID)</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<th>Coconut Saplings</th></tr>
+<tr>
+<td >Coconut country sapling</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<th>ROSES</th>
+<tr>
+<td >Red Rose</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<tr>
+<td >Orange Rose</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<tr>
+<td >White Rose</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<tr>
+<th>Mango plants</th>
+</tr>
+<tr>
+<td >Mango country Sapling</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<tr>
+<tr>
+<td >Mango sapling(HYBRID)</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<th>Coconut Saplings</th></tr>
+<tr>
+<td >Coconut country sapling</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<th>ROSES</th>
+<tr>
+<td >Red Rose</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<tr>
+<td >Orange Rose</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<tr>
+<td >White Rose</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<tr>
+<th>Mango plants</th>
+</tr>
+<tr>
+<td >Mango country Sapling</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<tr>
+<tr>
+<td >Mango sapling(HYBRID)</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<th>Coconut Saplings</th></tr>
+<tr>
+<td >Coconut country sapling</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<th>ROSES</th>
+<tr>
+<td >Red Rose</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<tr>
+<td >Orange Rose</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+<tr>
+<td >White Rose</td>
+<td> </td>
+<td><input type="number" value="0"></td>
+</tr>
+
+</table>
+</div>
+
+<form>
+<h3>Name:</h3>
+<input type="text" placeholder="Enter your name" required>
+<br>
+<h3>Place:</h3>
+<input type="text" placeholder="Enter your Area and District" required>
+</form>
+
+</div>
+
+<br>
+<button class="btn btn-primary" id="download"> DOWNLOAD PDF</button>
+<br>
+<font style="color:green;font-size:20px;font-weight:bold">
+STEPS TO ORDER:
+</font>
+<br>
+<font style="color:purple;font-size:18px;font-weight:bold">
+STEP 1: Enter your Name and Place
+<br>
+STEP 2: Click "Download PDF" and Download the pdf file
+<br>
+STEP 3: Click Whatsapp icon and send the pdf file
+</font>
+<br>
+<a href="https://wa.me/919159220534?text="
+>
+<img
+src="wp.jpg"
+alt=""
+height="90px"
+width="90px"
+/>
+</a>
+</div>
+<script>
+  let value=document.querySelector('.mangov').value;
+        console.log(document.querySelector('.total1').innerHTML);
+        function totalcal(quant,price,totalcost){
+
+            if(event.key ==='Enter'){
+                totalcost.innerHTML= quant* price;
+            }
+        }
+</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        
+        <table>
+            <tr>
+            <th>Product name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>TotalCost
+                <p>Press Enter to claculate Total</p>
+            </th>
+            </tr>
+            
+            <tr>
+            <th>Mango plants</th>
+            </tr>
+            <tr>
+            <td >Mango country Sapling</td>
+            <td> 100 </td>
+            <td ><input type="number" placeholder="ENTER quantity" class="mango1" onkeydown="
+                totalcal(value,100,document.querySelector('.total1'),document.querySelector('.mango1').value)
+                " ></td>
+            <td> <p class="total1"> </p> </td>
+            </tr>
+            <tr>
+                <td >Mango Hybrid</td>
+                <td> 10 </td>
+                
+                <td ><input id="man"type="number" placeholder="ENTER quantity" class="mango2" onkeydown="
+                    totalcal(value,10,document.querySelector('.total2'),document.querySelector('.mango2').value);
+                    " ></td>
+                    <td> <p class="total2">  </p> </td>
+                
+            </tr>
+            <tr>
+                <td >Mango Hybrid 2</td>
+                <td> 20 </td>
+                
+                <td ><input  placeholder="ENTER quantity" class="mango3" onkeydown="
+                    totalcal(value,20,document.querySelector('.total3'),document.querySelector('.mango3').value)
+                    " ></td>
+                    <td> <p class="total3">  </p> </td>
+                
+            </tr>
+        </table>
+        <h3>Total:  <p class="gtotal"> 0 </p> </h3>
+            
+    </body>
+    <script>
+        
+        let grandtotal = 0;
+       // document.querySelector('.gtotal').innerHTML=(JSON.parse(localStorage.getItem('gt')));
+        
+        function totalcal(quant,price,totalcost,val){
+            let temp=totalcost.innerHTML;
+            
+            if(event.key ==='Enter'){
+                if (val>9){
+                  
+                    grandtotal=grandtotal-temp;
+                    totalcost.innerHTML=0;
+                    totalcost.innerHTML= val* price;
+                    grandtotal += val* price;
+                }
+                else{
+                    
+                totalcost.innerHTML= quant* price;
+                grandtotal += quant* price;
+                //localStorage.setItem('gt',JSON.stringify(grandtotal));
+                
+                
+            }
+        }
+            else if(event.key ==='Backspace'){
+
+                
+                grandtotal=grandtotal-temp;
+                totalcost.innerHTML=0;
+                
+            }
+            document.querySelector('.gtotal').innerHTML=grandtotal;
+            
+            //document.querySelector('.gtotal').innerHTML=(JSON.parse(localStorage.getItem('gt')));
+            
+           /* 
+            else{
+                if (val>9){
+                    console.log("**")
+                    grandtotal=grandtotal-temp;
+                    totalcost.innerHTML=0;
+                    totalcost.innerHTML= val* price;
+                    grandtotal += val* price;
+                }
+                else{
+                totalcost.innerHTML= event.key* price;
+                grandtotal += event.key* price;
+                
+            }
+    
+            document.querySelector('.gtotal').innerHTML=grandtotal;
+            
+        */
+        
+    }     
+        
+    
+    
+
+        
+
+    </script>
+</html>
